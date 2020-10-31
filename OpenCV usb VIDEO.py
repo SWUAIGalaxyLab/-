@@ -1,3 +1,10 @@
+#########################################以下是王瑞基的实现方式案例############################################
+#实现功能：调用摄像头录制视频，每5s保存一次图像，人脸检测，检测到人脸后进行框选
+#开发环境：Win10+Visual Studio Code
+#语言版本：Python 3.6.5
+#在win10的命令行中使用pip下载OpenCV包，由于国外源下载速度十分缓慢，这里建议使用国内清华大学镜像源，命令是：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-python
+#人脸检测的数据集在OpenCV中自带，如果没有可以使用我上传到仓库的xml文件
+
 import cv2
 import os
 import time
