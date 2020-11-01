@@ -5,6 +5,7 @@
 #在win10的命令行中使用pip下载OpenCV包，由于国外源下载速度十分缓慢，这里建议使用国内清华大学镜像源，命令是：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-python
 #人脸检测的数据集在OpenCV中自带，如果没有可以使用我上传到仓库的xml文件
 
+
 import cv2
 import os
 import time
