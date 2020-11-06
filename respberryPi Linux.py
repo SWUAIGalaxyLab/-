@@ -71,36 +71,11 @@ def openCamera(port):
     cv2.destroyAllWindows()
     #释放以及关闭进程
 
-"""     cap = cv2.VideoCapture(port)
-    cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter.fourcc('M', 'J', 'P', 'G'))  # 视频流格式
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-    width = cap.get(3)
-    height = cap.get(4)
-    print(width, height, cap.get(5))
- 
-    while True:
-        ret, frame = cap.read()
- 
-        if not ret:
-            print("get camera " + str(port) + " frame is empty")
-            break
- 
-        title = "image" + str(port)
-        cv2.imshow(title, frame)
- 
-        key = cv2.waitKey(10)
-        if key == ord('q'):
-            break
- 
-    cap.release()
-    cv2.destroyAllWindows() """
- 
  
 if __name__ == '__main__':
     #多进程 树莓派上偶数对应一个摄像头
     cam1 = multiprocessing.Process(target=openCamera, args=(0,))
-    cam1.start()
+    cam1.start()                                                     #进程1
  
     cam2 = multiprocessing.Process(target=openCamera, args=(1,))
-    cam2.start()
+    cam2.start()                                                     #进程2
